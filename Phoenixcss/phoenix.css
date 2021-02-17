@@ -1,0 +1,52 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'open sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5F100B;
+}
+.header__logo {
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header__nav {
+  display: flex;
+}
+.header__nav li {
+  margin-left: 15px;
+}
+.header__link {
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.header__link:hover {
+  letter-spacing: 3px;
+}
+
+.home__content {
+  background-image: url("../phoeniximg/fon.png");
+  background-size: cover;
+}

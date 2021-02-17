@@ -1,0 +1,551 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', cursive;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Reggae One', cursive;
+    z-index: 1000000;
+    transition: all 0.3s ease;
+
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        font-size: 50px;
+        cursor: pointer;
+        color: white;
+    }
+    &__nav{
+        display: flex;
+    }
+    &__nav li{
+        margin-left: 25px;
+    }
+    &__link{
+        color: white;
+        font-size: 22px;
+        transition: all 0.3s ease;
+    }
+
+    &__link::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        display: block;
+        transition: width 0.3s ease;
+    }
+    &__link:hover::after{
+        width: 100%;
+        background-color: white;
+    }
+}
+.header.active{
+    background: #222;
+    padding: 15px 0;
+}
+
+.header__logo a{
+    color: white;
+}
+
+.header__menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+.home{
+    display: flex;
+    background-image: url('../phoeniximg/Phoenixfon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', cursive;
+    
+    &__content{
+    height: 100vh;
+    background-attachment: fixed;
+    min-width: 500px;
+    color: black;
+    text-align: center;
+    position: relative;
+    animation: text 3s 1;
+    }
+
+    &__title{
+        font-size: 70px;
+        text-align: center;
+        padding-top: 300px;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #111;
+    }
+
+    &__subtitle{
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 100px;
+        color: white;
+        box-shadow: 0 0 0.3px 0 black;
+    }
+
+    @keyframes text {
+        from{
+            letter-spacing: 5px;
+            margin-bottom: -30px;
+        }
+
+        60%{
+            text-shadow: 0 0 0px whitesmoke;
+        }
+    }
+    &__button{
+        font-size: 30px;
+        border-radius: 12px;
+        padding: 15px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20%;
+        color: white;
+        font-family: 'Montserrat', cursive;
+        background-color: #31a9dd;
+        transition: 0.3s all ease-in;
+        outline: none;
+    }
+    &__button a{
+        color: white;
+        transition: all 0.3s ease;
+    }
+    &__button:hover, &__button a:hover{
+        color: #31a9dd;
+        background: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.about{
+    margin-top: 20px;
+
+    &__title{
+        font-size: 46px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__phoenix{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px; 
+    }
+    &__phoenix-all{
+        cursor: pointer;
+    }
+    &__phoenix-img{
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    &__phoenix-title{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    &__phoenix-subtitle{
+        margin: 10px 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.team{
+    text-align: center;
+    background: #333;
+    color: white;
+    overflow: hidden;
+
+    &__title{
+        font-size: 40px;
+        font-weight: 700;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    &__member{
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    &__img{
+        height: 350px;
+        border-radius: 6px;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
+    &_img:hover{
+       transition: all 0.3s ease; 
+       opacity: 0.3;
+    }
+
+    &__all-title{
+        margin-top: 10px;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    &__all-subtitle{
+        margin-top: 5px;
+        font-size: 18px;
+    }
+}
+
+.owl-dots{
+    text-align: center;
+}
+.owl-dot{
+    width: 12px;
+    height: 12px;
+    outline: none!important;
+    margin: 0px 2px 10px;
+    border-radius: 50%;
+    border: 2px solid white!important;
+    background: white!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: rgb(100, 98, 98)!important;
+    width: 15px;
+    height: 15px;
+}
+
+
+
+
+.victory{
+
+    &__title{
+        font-size: 40px;
+        font-weight: 700;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+
+    }
+    &__content{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    &__all{
+        position: relative;
+        cursor: pointer;
+    }
+    &__all--1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    &__all--2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    &__all--3{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    &__all--4{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    &__all--7{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 24px;
+        border-radius: 6px;
+    }
+    &__text{
+        text-align: center;
+        padding: 25px;
+        font-size: 20px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+        transform: translateY(20px);
+        backdrop-filter: blur(3px);
+    }
+
+    &__text:hover{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.footer{
+    background: #222;
+    color: white;
+    text-align: center;
+
+    &__container{
+        background: #222;
+    }
+
+    &__title a{
+        color:rgb(202, 204, 214);
+    }
+}
+
+@media screen and (max-width: 995px){
+    .about__phoenix{
+        display: block;
+    }
+    .about__phoenix-all{
+        padding: 20px ;
+    }
+}
+
+@media screen and (max-width: 947px){
+    .header{
+        padding: 10px;
+    }
+    .home__subtitle{
+        color: black;
+    }
+    .header__menu-btn{
+        display: block;
+        z-index: 100000;
+    }
+
+    .header__menu-btn i.active::before{
+        content: "\f00d";
+        transition: all 0.2s ease;
+    }
+
+    .header__nav{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        background: #222;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.4s ease;
+    }
+
+    .header__nav.active{
+        left: 0;
+    }
+
+    .header__nav{
+        display: block;
+    }
+    .header__link{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    .header__logo{
+        font-size: 32px;
+    }
+
+    .home__title{
+        font-size: 50px;
+    }
+
+    .home__subtitle{
+        font-size: 20px;
+    }
+    .home__btn{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .victory__text{
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .home{
+        height: 150vh;
+        width: 130%;
+    }
+    .container{
+        width: 130%;
+    }
+    .header__logo{
+        margin-left: 40px ;
+    }
+    .header__menu-btn{
+        margin-right: 50px;
+    }
+    .home__subtitle{
+        color: black;
+    }
+    .about__phoenix-img{
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .about__phoenix-subtitle {
+        margin: 10px 20px;
+    }
+
+    .team{
+        width: 130%;
+    }
+    .team__img{
+        height: 600px;
+    }
+    .victory__text{
+        font-size: 15px;
+        padding: 12px;
+    }
+    .victory__content{
+        display: block;
+        padding: 10px 0px;
+    }
+}
+@media screen and (max-width: 400px){
+    .container{
+        width: 150%;
+    }
+    .home{
+        height: 150vh;
+        width: 150%;
+    }
+    .header__logo{
+        margin-left: 40px ;
+    }
+    .header__menu-btn{
+        margin-right: 70px;
+    }
+
+    .home__title{
+        padding-top: 150px;;
+    }
+    .home__subtitle{
+        color: white;
+    }
+    .about__phoenix-img{
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
+    .about__phoenix-subtitle {
+        margin: 10px 20px;
+    }
+
+
+    .about__title{
+        font-size: 36px;
+    }
+    .about__phoenix-title{
+        font-size: 26px;
+    }
+
+    .team{
+        text-align: justify;
+        width: 150%;
+        &__member{
+            text-align: justify;
+        }
+    }
+
+    .team__img{
+        height: 700px;
+    }
+
+    .victory__text{
+        font-size: 15px;
+        padding: 12px;
+    }
+    .victory__content{
+        display: block;
+        padding: 10px 0px;
+    }
+}
